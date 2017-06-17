@@ -75,4 +75,6 @@ function delTree($dir)
     return rmdir($dir);
 }
 
+
+mkdir("build",0755);
 exit(0);
