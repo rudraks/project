@@ -1,0 +1,22 @@
+{
+    "name": "rudrax/project",
+    "description": "Web Skeleton Application for ZF2",
+    "license": "proprietary",
+    "keywords": [
+    ],
+    "config" : {
+        "vendor-dir" : "lib"
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "rudrax/boot": "^0.0.17"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "skel/post_create_project.php"
+        ]
+    }
+}
