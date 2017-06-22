@@ -43,10 +43,6 @@ Header set Access-Control-Allow-Origin "*"
     Header set Access-Control-Allow-Credentials true
 </IfModule>
 
-
-RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
-RewriteRule ^(.*)$ - [E=BASE:%1]
-
 ################################### Your Custom Rules starts here ############################################
 
 
@@ -63,6 +59,7 @@ RewriteCond $1 !^(src|dist)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?q=$1 [ENV=INDEX:true,L,QSA]
+RewriteRule ^$ index.php?q=[ENV=INDEX:true,L,QSA]
 
 
 ############################################################################################
